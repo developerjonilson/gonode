@@ -19,6 +19,10 @@ const Ad = new moongose.Schema({
     type: Number,
     required: true
   },
+  purchasedBy: {
+    type: moongose.Schema.Types.ObjectId,
+    ref: 'Purchase'
+  },
   createdAt: {
     type: Date,
     default: Date.now
